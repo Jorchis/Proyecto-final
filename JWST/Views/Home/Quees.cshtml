@@ -1,6 +1,20 @@
-﻿@{
+﻿@model IEnumerable<JWST___PWEB__lab____proy._final.Models.importantFacts>
+
+@{
     ViewData["Title"] = "¿Qué es el JWST?";
 }
+
+@section Cards{
+    <div class="col-3 aside">
+        <br>
+        <h2 class="aside-title">Datos reelevantes</h2>
+        <br>
+        <div class="cards">
+        </div>
+        <br>
+        <a class="new-IF" asp-action="Create">Agregar nuevo</a>
+    </div>
+    }
 
 <div class="col contenido">
     <h1>La mayor máquina del tiempo jamás creada</h1>
