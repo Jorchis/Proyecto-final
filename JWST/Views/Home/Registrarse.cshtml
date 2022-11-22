@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Registrarse";
+}
+
+<div class="container main">
+    <div class="formi">
+        <h3>Regístrate</h3>
+        <br>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Crea un nombre de usuario válido</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Ingresa tu contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div id="passwordHelpBlock" class="form-text">
+                Su contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener
+                espacios, caracteres especiales ni emoticones.
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Ingresa tu contraseña nuevamente</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+            <br><br>
+            <a >¿Ya tienes una cuenta? - Inicia sesión</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function(){
+            $('.aside').remove();
+        });
+    </script>
+}

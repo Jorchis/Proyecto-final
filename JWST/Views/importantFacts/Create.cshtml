@@ -1,0 +1,55 @@
+﻿@model JWST.Models.importantFacts
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>importantFacts</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IFTitle" class="control-label"></label>
+                <input asp-for="IFTitle" class="form-control" />
+                <span asp-validation-for="IFTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IFText" class="control-label"></label>
+                <input asp-for="IFText" class="form-control" />
+                <span asp-validation-for="IFText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pictureURL" class="control-label"></label>
+                <input asp-for="pictureURL" class="form-control" />
+                <span asp-validation-for="pictureURL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userID" class="control-label"></label>
+                <input asp-for="userID" class="form-control" />
+                <span asp-validation-for="userID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+            <script>
+                $(document).ready(function(){
+                    $('.aside').remove();
+                });
+            </script>
+}
